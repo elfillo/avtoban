@@ -1,0 +1,57 @@
+.info-block
+  width: 100%
+  max-width: 1242px
+  display: flex
+  justify-content: space-between
+  margin: auto
+  margin-right: calc(50% - 400px)
+  +adaptive($mobile)
+    flex-direction: column-reverse
+    margin-right: 0
+  .img
+    width: 100%
+    max-width: 646px
+    margin-right: 10px
+  .text
+    width: 100%
+    max-width: 371px
+    display: flex
+    flex-direction: column
+    justify-content: center
+    +adaptive($mobile)
+      max-width: 90%
+      margin: auto
+    .title
+      width: 100%
+      text-align: right
+      font-size: 14px
+      line-height: 16px
+      margin-bottom: 20px
+    .desc
+      width: 100%
+      text-align: right
+      font-size: 14px
+      line-height: 16px
+      margin-bottom: 20px
+    .btn
+      width: 158px
+      margin-left: auto
+      margin-bottom: 20px
+.info-block.reverse
+  flex-direction: row-reverse
+  margin-right: 0
+  +adaptive($mobile)
+    flex-direction: column-reverse
+    margin-right: 0
+  .text
+    max-width: 371px
+    +adaptive($mobile)
+      max-width: 90%
+      margin: auto
+      margin-top: 20px
+    .title
+      text-align: left
+    .desc
+      text-align: left
+    .btn
+      margin-left: 0

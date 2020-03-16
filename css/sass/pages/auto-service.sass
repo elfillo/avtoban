@@ -1,0 +1,30 @@
+.page--auto-service
+  &.select-banner
+    width: 100%
+    height: 364px
+    background-image: url("../img/as-select_ban.png")
+    background-position: center
+    background-size: cover
+    background-repeat: no-repeat
+    .container
+      height: 100%
+      display: flex
+      justify-content: space-between
+      align-items: center
+      +adaptive($mobile)
+        flex-direction: column
+      .box
+        width: 100%
+        max-width: 415px
+        height: 207px
+        display: flex
+        justify-content: center
+        align-items: center
+        color: $white
+        border: 5px solid inherit
+        text-align: center
+        +adaptive($mobile)
+          max-width: 90%
+          margin: auto
+        &:hover
+          border: 5px solid $white

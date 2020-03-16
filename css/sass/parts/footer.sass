@@ -1,0 +1,127 @@
+.footer
+  width: 100%
+  #map
+    width: 100%
+    height: 684px
+    position: relative
+    +adaptive($mobile)
+      display: none
+    .container
+      position: absolute
+      left: calc(calc(100% - 999px) / 2)
+      top: 150px
+      z-index: 1000
+      +adaptive($mobile)
+        position: unset
+        width: 100%
+        padding: 0
+      .info
+        width: 100%
+        max-width: 320px
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        height: 400px
+        background-color: $yellow
+        padding: 32px
+        p
+          display: block
+          width: 100%
+          span
+            display: block
+            font-size: 14px
+            line-height: 16px
+            color: $black
+          span.bold
+            font-weight: bold
+  &_main
+    width: 100%
+    padding: 83px 0 56px
+    background-color: $black
+    .logo
+      width: 182px
+      height: 50px
+      margin-bottom: 37px
+    .box
+      display: flex
+      justify-content: space-between
+      +adaptive($mobile)
+        flex-direction: column
+      &_content
+        width: 100%
+        max-width: calc(100% - 300px)
+        color: $white
+        font-size: 14px
+        line-height: 16px
+        +adaptive($mobile)
+          //max-width: 100%
+          max-width: 223px
+          margin: auto
+        nav.pagesww
+          width: 100%
+          margin-bottom: 20px
+          ul
+            display: flex
+            justify-content: space-between
+            +adaptive($mobile)
+              flex-direction: column
+            li
+              width: 25%
+        .col
+          width: 100%
+          display: flex
+          +adaptive($mobile)
+            flex-direction: column
+          nav
+            .title
+              margin-bottom: 20px
+            ul
+              li
+                font-size: 12px
+                line-height: 14px
+                margin-bottom: 10px
+          nav.categories
+            width: 25%
+            +adaptive($mobile)
+              width: 100%
+          nav.models
+            width: 75%
+            +adaptive($mobile)
+              width: 100%
+            ul
+              column-count: 3
+              +adaptive($mobile)
+                column-count: 1
+
+      &_form
+        width: 100%
+        max-width: 223px
+        +adaptive($mobile)
+          margin: auto
+        .title
+          width: 100%
+          color: $white
+          text-align: right
+          margin-bottom: 12px
+        input
+          width: 100%
+          height: 40px
+          border-bottom: 1px solid $white
+          color: $white
+          background-color: inherit
+        .btn
+          width: 158px
+          border: 3px solid $white
+          margin-top: 16px
+          float: right
+          cursor: pointer
+          &:hover
+            background-color: $yellow
+            border: 3px solid $black
+            color: $black
+
+
+
+
+
+

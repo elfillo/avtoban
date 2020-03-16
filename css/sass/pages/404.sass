@@ -1,0 +1,51 @@
+.not-found
+  width: 100vw
+  height: 100vh
+  background-color: black
+  display: flex
+  align-items: center
+  justify-content: flex-end
+  .content
+    width: 100%
+    max-width: 1079px
+    height: 417px
+    display: flex
+    .text
+      width: 100%
+      max-width: 423px
+      .title
+        width: 100%
+        font-weight: bold
+        font-size: 22px
+        line-height: 28px
+        text-align: left
+        text-transform: unset
+        color: $yellow
+      .sub
+        width: 100%
+        height: 227px
+        border-top: 23px solid $yellow
+        border-bottom: 23px solid $yellow
+        color: $yellow
+        font-size: 200px
+        font-weight: bold
+        text-align: center
+        display: flex
+        align-items: center
+        justify-content: center
+      .btn
+        width: 158px
+        margin: auto
+        margin-top: 32px
+        .button
+          width: auto
+          border-color: $white
+          background-color: black
+          color: $white
+          text-decoration: none
+    .img
+      width: calc(100% - 417px)
+      height: 100%
+      background: url('../img/404.png')
+      background-repeat: no-repeat
+      background-size: cover

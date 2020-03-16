@@ -1,0 +1,35 @@
+.other_organizations
+  width: 100%
+  .title
+    width: 100%
+    text-align: center
+    margin-bottom: 23px
+    font-weight: bold
+  .list
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    +adaptive($mobile)
+      justify-content: space-around
+    .item
+      width: 236px
+      margin-bottom: 10px
+      &:hover
+        .text
+          background-color: $yellow
+      .logo
+        width: 100%
+        height: 94px
+      .text
+        width: 100%
+        padding: 11px 17px
+        .name
+          width: 100%
+          font-size: 14px
+          line-height: 16px
+          font-weight: bold
+          margin-bottom: 5px
+        .desc
+          width: 100%
+          font-size: 10px
+          line-height: 12px
