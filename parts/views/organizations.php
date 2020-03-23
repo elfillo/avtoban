@@ -1,20 +1,17 @@
+<?php $organizations = carbon_get_theme_option('other_organizations');?>
 <section class="container">
 <div class="other_organizations">
 	<div class="title">ДРУГИЕ ОРГАНИЗАЦИИ</div>
 	<div class="list">
-		<?php for($i = 0; $i < 8; $i++):?>
-		<div class="item">
-			<div class="logo"><img src="<?php get_uri('img/default-logo.png')?>" alt="#"></div>
+        <?php foreach ($organizations as $organization):?>
+		<a href="<?php echo $organization['organization--link']?>" class="item">
+			<div class="logo"><img src="<?php echo $organization['organization--img']?>" alt="#"></div>
 			<div class="text">
-				<div class="name">НАЗВАНИЕ ОРГАНЗАЦИИ</div>
-				<div class="desc">
-					Короткое описание деятельности
-					организации, город,
-					контакты и т.д.
-				</div>
+				<div class="name"><?php echo $organization['organization--title']?></div>
+				<div class="desc"><?php echo $organization['organization--desc']?></div>
 			</div>
-		</div>
-		<?php endfor;?>
+		</a>
+		<?php endforeach; unset($organizations, $organization)?>
 	</div>
 </div>
 </section>

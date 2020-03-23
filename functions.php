@@ -54,6 +54,7 @@ function zulza_widgets_init() {
 add_action( 'widgets_init', 'zulza_widgets_init' );
 
 require_once ('parts/admin/helpers.php');
+require_once ('parts/admin/ajax.php');
 require_once ('parts/admin/custom_fields.php');
 require_once ('parts/admin/shortcodes/recently_viewed_products.php');
 require_once ('parts/admin/woocommerce.php');

@@ -1,21 +1,15 @@
 <?php
-	$lorem = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ';
-	$list = [
-		['title' => 'Диагностика автомобиля', 'text' => $lorem],
-		['title' => 'Авторемонт', 'text' => $lorem],
-		['title' => 'Продажа автомобилей', 'text' => $lorem],
-		['title' => 'Транспортировка', 'text' => $lorem],
-	]
+	$services = carbon_get_theme_option('services');
 ?>
 <section class="services-list">
 	<div class="container">
 		<div class="list">
-			<?php foreach ($list as $item):?>
+			<?php foreach ($services as $service):?>
 			<div class="item">
-				<div class="title"><?php echo $item['title']?></div>
-				<div class="desc"><?php echo $item['text']?></div>
+				<div class="title"><?php echo $service['services--title']?></div>
+				<div class="desc"><?php echo $service['services--desc']?></div>
 			</div>
-			<?php endforeach;?>
+			<?php endforeach; unset($services, $service)?>
 		</div>
 	</div>
 </section>
