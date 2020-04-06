@@ -95,15 +95,5 @@
 						Field::make( 'rich_text', 'contact--desc', 'Описание' ),
 					) )
 			));
-		Container::make( 'post_meta', 'Адреса на карте' )
-			->where( 'post_id', '=', $id )
-			->add_fields( array(
-				Field::make( 'image', 'marker-icon', 'Иконка маркера на карте' )->set_value_type( 'url' )->set_width( 33 ),
-				Field::make( 'text', 'center-map', 'Координаты центра' )->set_width( 67 ),
-				Field::make( 'complex', 'contacts-map', 'Список маркеров' )
-					->add_fields( 'marker-list', 'Координаты', array(
-						Field::make( 'text', 'marker-position', 'Координаты' )->set_attribute( 'placeholder', '52.275307, 104.321372' ),
-					) )
-			));
 	}
 ?>
